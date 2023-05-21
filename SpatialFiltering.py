@@ -22,7 +22,7 @@ def sp(Pic, Ser, Size):
     return new_pic
 
 
-img = cv2.imread("Goldhill.tif")
+img = cv2.imread("Lena.tif")
 img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 filter_size = int(input("Enter filter size: "))
@@ -35,5 +35,9 @@ ax[0].set_title('Input Image')
 ax[1].imshow(filtered_img, cmap='gray')
 ax[1].set_title('Spatial Linear Filtered Image')
 plt.show()
+
+output_filename = "filtered_image.jpg"  # Specify the filename and extension for the output image
+cv2.imwrite(output_filename, filtered_img.astype(np.uint8))
+print("Filtered image saved as", output_filename)
 
 print(np.sum(filtered_img))
