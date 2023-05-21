@@ -36,7 +36,7 @@ ax[1].imshow(filtered_img, cmap='gray')
 ax[1].set_title('Spatial Linear Filtered Image')
 plt.show()
 
-# Çıktı görüntüsü için dosya adını belirtip kaydetme işlemi
+# Çıktı görüntüsü için dosya adını belirtip kaydetme işlemi.
 output_filename = "filtered_image.jpg"
 cv2.imwrite(output_filename, filtered_img.astype(np.uint8))
 print("Filtered image saved as", output_filename)
